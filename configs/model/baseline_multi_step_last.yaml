@@ -1,0 +1,2 @@
+_target_: networks.baseline.MultiStepLastBaseline
+num_out_steps: 24

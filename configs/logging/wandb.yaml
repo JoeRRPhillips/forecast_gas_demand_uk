@@ -1,0 +1,6 @@
+log_wandb: True
+monitor: "val_loss"
+save_best_only: True
+save_model: True  # False for speed. True to keep.
+checkpoint_dir: "saved_models/checkpoints/"
+save_freq: "epoch"

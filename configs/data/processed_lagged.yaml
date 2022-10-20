@@ -1,0 +1,4 @@
+train_data_filepath: "/mnt/c/Users/JPhillips/ldz/data/processed_lagged/train.csv"
+test_data_filepath: "/mnt/c/Users/JPhillips/ldz/data/processed_lagged/test.csv"
+labels_columns: ["demand"]
+#drop_columns: ["demand_scaled", "demand_lag1_scaled"]  # Keep: demand_lag1

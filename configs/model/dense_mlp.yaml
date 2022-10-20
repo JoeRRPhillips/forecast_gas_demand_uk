@@ -1,0 +1,7 @@
+_target_: networks.dense.MLP
+dense_units: [256, 256, 256, 256]
+num_outputs: 1
+dropout_rate: 0.1  # 0.15
+use_batchnorm: False
+activation_fn_hidden: "relu"
+activation_fn_output: "linear"

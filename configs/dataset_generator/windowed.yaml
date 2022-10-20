@@ -1,0 +1,11 @@
+_target_: etl.dataset_generators.WindowedDatasetGenerator
+input_width: 50  # 100  # Avoid multiples of 7
+label_width: 1
+#shift: 1
+shift: 0  # Use if data has been shifted manually
+label_columns: ["demand"]  # Optional: be very careful if not set!
+#input_width: 1
+#label_width: 1
+##shift: 1
+#shift: 0  # Use if data has been shifted manually
+#label_columns: ["demand"]  # Optional: be very careful if not set!

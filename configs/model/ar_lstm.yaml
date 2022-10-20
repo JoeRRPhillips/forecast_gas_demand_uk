@@ -1,0 +1,5 @@
+_target_: networks.ar_recurrent.AutoRegressiveMultiStepLSTM
+recurrent_units: 256
+#num_features: 73   # Must match train_df.shape[1].
+num_features: 66   # Must match train_df.shape[1].
+num_out_steps: 24  # Must match config_data["window_label_width"].

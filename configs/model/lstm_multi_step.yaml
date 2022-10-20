@@ -1,0 +1,3 @@
+_target_: networks.recurrent.LSTMNetwork
+recurrent_units: 256
+num_outputs: 24  # Must match config_data["window_label_width"].

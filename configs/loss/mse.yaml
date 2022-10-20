@@ -1,0 +1,2 @@
+_target_: losses.loss.LossObject
+loss_fn: "mse"

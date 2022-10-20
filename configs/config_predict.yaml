@@ -1,0 +1,35 @@
+defaults:
+  - _self_
+  - loss: huber
+  - model: dense_mlp
+  - data: processed  # [processed, processed_lagged]
+
+predict:
+  method: "batch"  # ["batch", "autoregressive"]
+  batch_size: 32  # 1
+  saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-22/17-53-33/saved_models/checkpoints/final/MLP"
+  output_dir: "/mnt/c/Users/JPhillips/ldz/predictions"
+  test: True  # To get final submissions
+  full: False  # To compare pred vs. actual on whole dataset
+
+predict_test:
+  output_filename: "test.csv"
+  template_output_file: "/mnt/c/Users/JPhillips/ldz/data/templates/test.csv"
+
+predict_full:
+  output_filename: "full.csv"
+  template_output_file: "/mnt/c/Users/JPhillips/ldz/data/templates/full.csv"
+
+# Needed to rebuild model, values unused
+train:
+  epochs: 300  # Train, val, best_val, best_epoch: 6.1, 8.8, 4.38, 883
+
+optimisation:
+  learning_rate: 1e-3  # 2e-3  # 1e-3  # 5e-4  # 3e-4
+
+# Past submissions
+#  1. saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-07/09-26-22/saved_models/checkpoints/final/MLP"
+#  2. saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-07/19-28-06/saved_models/checkpoints/final/MLP"
+#  3. saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-07/20-44-35/saved_models/checkpoints/final/MLP"
+#  4. saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-22/15-29-24/saved_models/checkpoints/final/MLP"
+#   saved_model_path: "/mnt/c/Users/JPhillips/ldz/outputs/2022-06-22/17-31-06/saved_models/checkpoints/final/MLP"

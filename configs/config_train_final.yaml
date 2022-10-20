@@ -1,0 +1,15 @@
+defaults:
+  - _self_
+  - loss: huber
+  - model: dense_mlp
+  - dataset_generator: linear
+  - data: processed  # [processed, processed_lagged]
+  - optimisation: reduce_lr_on_plateau_full
+  - logging: wandb_full
+
+use_full_data: True
+
+train:
+  epochs: 250
+  batch_size: 32
+  validation_ratio: 0.11  # 0.3. # 0.11 --> 1 year. For comparison only - full data will remain in training set.

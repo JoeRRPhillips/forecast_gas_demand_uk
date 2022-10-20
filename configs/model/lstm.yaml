@@ -1,0 +1,9 @@
+_target_: networks.recurrent.LSTMNetwork
+rnn_units: [16, 16]  # 2000 --> 15, 13. Norm, no ynum.
+#rnn_units: [16, 16]  # 2000 --> 33, 22. Norm, ynum.
+#rnn_units: [16, 16, 16]  # 2000 --> 4.7k, 3.8k. Norm, ynum.
+#rnn_units: [16, 16]  # 2000 --> 12, 16. No norm, no ynum.
+#rnn_units: [16, 16, 16]  # 2000 --> 8, 17. No norm, no ynum.
+#rnn_units: [8, 8]  # Underfit
+num_outputs: 1  # Must match config_data["window_label_width"].
+hidden_dense_layers: []

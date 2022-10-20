@@ -1,0 +1,5 @@
+_target_: etl.dataset_generators.LinearDatasetGenerator
+label_columns: ["demand"]
+shuffle_data: True
+shuffle_buffer_size: 3000
+# kwargs provided by main script: [batch_size, train_df, validation_df, test_df]

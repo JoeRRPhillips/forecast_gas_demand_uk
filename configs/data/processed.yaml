@@ -1,0 +1,96 @@
+train_data_filepath: "/mnt/c/Users/JPhillips/ldz/data/processed/train.csv"
+test_data_filepath: "/mnt/c/Users/JPhillips/ldz/data/processed/test.csv"
+full_postprocessed_data_filepath: "/mnt/c/Users/JPhillips/ldz/data/postprocessed/full.csv"
+labels_columns: ["demand"]
+features_columns:
+  - "sin_yday"
+  - "cos_yday"
+  - "sin_2yday"
+  - "cos_2yday"
+  - "sin_3yday"
+  - "cos_3yday"
+  - "year_decimal"
+  - "is_weekend"
+  - "temp_1"
+  - "temp_night_1"
+  - "temp_2"
+  - "temp_night_2"
+  - "temp_3"
+  - "temp_night_3"
+  - "temp_4"
+  - "temp_night_4"
+  - "temp_6"
+  - "temp_night_6"
+  - "temp_7"
+  - "temp_night_7"
+  - "temp_8"
+  - "temp_night_8"
+  - "temp_9"
+  - "temp_night_9"
+  - "temp_10"
+  - "temp_night_10"
+  - "temp_11"
+  - "temp_night_11"
+  - "temp_12"
+  - "temp_night_12"
+  - "temp_13"
+  - "temp_night_13"
+  - "wind_1"
+  - "wind_night_1"
+  - "wind_2"
+  - "wind_night_2"
+  - "wind_3"
+  - "wind_night_3"
+  - "wind_4"
+  - "wind_night_4"
+  - "wind_6"
+  - "wind_night_6"
+  - "wind_7"
+  - "wind_night_7"
+  - "wind_8"
+  - "wind_night_8"
+  - "wind_9"
+  - "wind_night_9"
+  - "wind_10"
+  - "wind_night_10"
+  - "wind_11"
+  - "wind_night_11"
+  - "wind_12"
+  - "wind_night_12"
+  - "wind_13"
+  - "wind_night_13"
+  - "ssrd_ratio_1"
+  - "ssrd_ratio_2"
+  - "ssrd_ratio_3"
+  - "ssrd_ratio_4"
+  - "ssrd_ratio_6"
+  - "ssrd_ratio_7"
+  - "ssrd_ratio_8"
+  - "ssrd_ratio_9"
+  - "ssrd_ratio_10"
+  - "ssrd_ratio_11"
+  - "ssrd_ratio_12"
+  - "ssrd_ratio_13"
+
+features:
+  summarise: False
+  lags: True
+  ema: True
+
+summary_features:
+  colnames: ["temp_", "temp_night_"]
+  gridpoints: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+  lag_summaries: False
+  ema_summaries: False
+
+lag_features:
+  colnames: ["temp_", "temp_night_"]
+  gridpoints: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+#  time_periods: [1,]
+  time_periods: [1, 2]
+
+ema_features:
+  colnames: ["temp_", "temp_night_"]
+  gridpoints: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+#  time_periods: [3]
+  time_periods: [3, 5]

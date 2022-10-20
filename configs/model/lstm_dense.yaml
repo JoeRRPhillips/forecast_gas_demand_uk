@@ -1,0 +1,7 @@
+_target_: networks.recurrent.LSTMNetwork
+rnn_units: [512]  # [64, 64, 64]  # Be careful of u > window_size
+dense_units: [256, 256]  # [128]
+dropout_rate_rnn: 0.0
+dropout_rate_dense: 0.2
+use_batchnorm: False
+num_outputs: 1  # Must match config_data["window_label_width"].

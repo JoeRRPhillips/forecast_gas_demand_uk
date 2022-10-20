@@ -1,0 +1,2 @@
+_target_: networks.dense.Linear
+num_outputs: 1
